@@ -208,6 +208,7 @@ Player.prototype.moveY = function(step, level, keys) {
   var obstacle = level.obstacleAt(newPos, this.size);
   if (obstacle) {
 	if(obstacle == 'lava'){
+		alert('You died.');
 		this.pos = new Vector(10,10);
 	}
     if (keys.up && this.speed.y > 0)
